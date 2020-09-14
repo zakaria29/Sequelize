@@ -29,5 +29,6 @@ module.exports = (sequelize, DataTypes) => {
     // setting nama table
     tableName: "product"
   });
+  
   return product;
 };

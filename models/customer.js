@@ -14,6 +14,10 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   customer.init({
+    customer_id: {
+      type: DataTypes.INTEGER,
+      primaryKey: true
+    },
     name: DataTypes.STRING,
     phone: DataTypes.STRING,
     address: DataTypes.STRING,
@@ -21,6 +25,7 @@ module.exports = (sequelize, DataTypes) => {
   }, {
     sequelize,
     modelName: 'customer',
+    tableName: "customer"
   });
   return customer;
 };
