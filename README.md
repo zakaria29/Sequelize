@@ -40,4 +40,4 @@ build REST API with [NodeJS](https://nodejs.org) & [Sequelize](https://sequelize
 ## For development
 1. clone repository ini
 2. run `yarn or npm install` untuk install dependency;
-3. run `npm start` dan selamat!!
+3. run `npm start` and enjooy!!
