@@ -2,6 +2,10 @@ const express = require("express")
 const multer = require("multer")
 const app = express()
 
+// menyisipkan proses validasi token untuk keamanan
+const validateToken = require("./auth/validateToken")
+app.use(validateToken)
+
 app.get("/", (req,res) => {
     // ambil data
 })

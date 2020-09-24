@@ -6,6 +6,10 @@ const transaksi = models.transaksi
 const detail_transaksi = models.detail_transaksi
 const app = express()
 
+// menyisipkan proses validasi token untuk keamanan
+const validateToken = require("./auth/validateToken")
+app.use(validateToken)
+
 app.use(express.urlencoded({extended: true}))
 
 app.get("/", async (req,res) => {

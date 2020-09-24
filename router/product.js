@@ -9,6 +9,10 @@ const product = models.product
 const path = require("path")
 const fs = require("fs")
 
+// menyisipkan proses validasi token untuk keamanan
+const validateToken = require("./auth/validateToken")
+app.use(validateToken)
+
 
 // config multer storage
 const storage = multer.diskStorage({
