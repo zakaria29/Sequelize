@@ -9,7 +9,7 @@ build REST API with [NodeJS](https://nodejs.org) & [Sequelize](https://sequelize
 
 ## Step by step
 1. siapkan folder project `computer_store`
-2. inisiasi npm `npm init --y`
+2. inisiasi npm `npm init --y'
 3. install "nodemon" --> `npm install nodemon`
 4. buat folder `product_image` dan `customer_image`
 5. buat folder "router" dan file dengan nama `server.js`

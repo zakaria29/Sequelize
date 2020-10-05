@@ -10,17 +10,28 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      // define association here
+      // hubungkan detail_transaksi ke product
+      this.belongsTo(models.product,{
+        foreignKey: "product_id",
+        as: "product"
+      })
     }
   };
   detail_transaksi.init({
-    transaksi_id: DataTypes.INTEGER,
-    product_id: DataTypes.INTEGER,
+    transaksi_id: {
+      type: DataTypes.INTEGER,
+      primaryKey: true
+    },
+    product_id: {
+      type: DataTypes.INTEGER,
+      primaryKey: true
+    },
     price: DataTypes.DOUBLE,
     qty: DataTypes.DOUBLE
   }, {
     sequelize,
     modelName: 'detail_transaksi',
+    tableName: "detail_transaksi"
   });
   return detail_transaksi;
 };
